@@ -4,3 +4,5 @@
 /Unity.2D.Tilemap.Editor.csproj
 /UnityEditor.UI.csproj
 /UnityEngine.UI.csproj
+/Library/*
+/Logs/*

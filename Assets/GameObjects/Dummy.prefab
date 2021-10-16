@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 3288966110092800230}
   - component: {fileID: 3288966110092800229}
   - component: {fileID: 3288966110092800226}
+  - component: {fileID: -462959685285354540}
   m_Layer: 0
   m_Name: Dummy
-  m_TagString: Untagged
+  m_TagString: Bone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,3 +127,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-462959685285354540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3288966110092800228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a856586352d67ddcf997d9be5b576db1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decay: 0.5
+  soul: 0.5
+  humidity: 0.5
+  sponginess: 0.1
+  mass: 1
+  decayRate: 0.000001
+  soulShift: -0.01
+  humidityChange: 0
+  sponginessChange: 0
+  massChange: 0
+  maxDecay: 1
+  maxSoul: 1
+  maxHumidity: 1
+  maxSponginess: 1

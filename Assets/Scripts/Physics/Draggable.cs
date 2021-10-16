@@ -6,7 +6,7 @@ public class Draggable : MonoBehaviour
     private Transform selfTransform;
     private Rigidbody selfRigidbody;
 
-    public float dragSpeedMultiplier;
+    public float dragSpeedMultiplier = 1.7f;
 
     private void Start() {
         selfTransform = GetComponent<Transform>();

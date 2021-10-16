@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayEntity : MonoBehaviour
 {
@@ -22,6 +23,10 @@ public class PlayEntity : MonoBehaviour
     public float maxSoul = 1;
     public float maxHumidity = 1;
     public float maxSponginess = 1;
+
+
+    public string legend = "Basic Legend";
+
 
     private bool isRuined() {
         if (decay >= maxDecay) {
@@ -78,8 +83,35 @@ public class PlayEntity : MonoBehaviour
     }
 
     private void notifyOnRuin() {
-        //Pop up on bone being ruined
+        //TODO Pop up on bone being ruined
         return;
+    }
+
+    public int calculateCost() {
+        //TODO Add cost calculation algo
+        return 1;
+    }
+
+    private string shortenString(string x, int targetLen = 4) {
+        while (x.Length > targetLen) {
+            x = x.Remove(x.Length - 1);
+        }
+
+        return x;
+    }
+
+    public string getDescription() {
+        string result = "";
+
+        result += legend;
+        result += "\n";
+        result += "Decay:      " + shortenString((decay * 100)     .ToString()) + "%\n";
+        result += "Soul:       " + shortenString((soul * 100)      .ToString()) + "%\n";
+        result += "Humidity:   " + shortenString((humidity * 100)  .ToString()) + "%\n";
+        result += "Sponginess: " + shortenString((sponginess * 100).ToString()) + "%\n";
+        result += "Mass:       " + shortenString(mass      .ToString()) + "kg\n";
+    
+        return result;
     }
 
     private void FixedUpdate() {

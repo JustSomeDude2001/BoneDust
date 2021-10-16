@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class MoneyDisplay : MonoBehaviour
 {
-    private Text selfText;
+    private TextMesh selfText;
     public GameObject playerInfo;
 
     private PlayerStats playerStats;
     void Start()
     {
         playerStats = playerInfo.GetComponent<PlayerStats>();
-        selfText = GetComponent<Text>();
+        selfText = GetComponent<TextMesh>();
     }
 
     // Update is called once per frame

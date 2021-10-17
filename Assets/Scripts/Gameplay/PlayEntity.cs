@@ -115,11 +115,11 @@ public class PlayEntity : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        if (isRuined()) {
+        /*if (isRuined()) {
             notifyOnRuin();
             Destroy(this.gameObject);
             return;
-        }
+        }*/
 
         balance();
         advance();

@@ -6,6 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/MainScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Skeletons/1_Normal.unity
+    guid: ee0a6dacd17e81d50ad16332b54a5d2d
+  - enabled: 1
+    path: Assets/Scenes/Skeletons/2_Heartbroken.unity
+    guid: 96701f925d055bdc19cc165978629bc0
+  - enabled: 1
+    path: Assets/Scenes/Skeletons/3_HeadTrauma.unity
+    guid: a7e2682c3684ecf83a80fea6735f035f
+  - enabled: 1
+    path: Assets/Scenes/Skeletons/4_Illuminati.unity
+    guid: 347cf98896dfcd00d8fe5f859a6cb2a8
+  - enabled: 1
+    path: Assets/Scenes/Skeletons/5_ShotWoman.unity
+    guid: 32ef24021b24b5378a4339b5879b544d
+  - enabled: 1
+    path: Assets/Scenes/Skeletons/6_Kid.unity
+    guid: b605128b01a1d5d2ca5c9e6e874b2093
+  - enabled: 1
+    path: Assets/Scenes/Skeletons/7_UnnamedSoldier.unity
+    guid: 0461570b16747cdb59fa45908efeb6c6
+  - enabled: 1
+    path: Assets/Scenes/Skeletons/8_StrangeBones.unity
+    guid: 85b2c361b16eaa055878871c27d5aa9d
   m_configObjects: {}

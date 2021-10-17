@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class DustSeller : MonoBehaviour
 {
-    public GameObject playerInfo;
-
-    private PlayerStats playerStats;
     private TextMesh display;
 
     private void Start() {
-        playerStats = playerInfo.GetComponent<PlayerStats>();
         display = GetComponent<TextMesh>();
         display.text = "Dust Seller";
     }
@@ -26,7 +22,7 @@ public class DustSeller : MonoBehaviour
 
         int profit = dustStats.getCost(); 
 
-        playerStats.money += profit;
+        PlayerStats.money += profit;
 
         display.text = "Last sale:\n";
         display.text += dustStats.toString();

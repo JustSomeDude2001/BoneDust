@@ -31,16 +31,16 @@ public class DustMaker : MonoBehaviour
             
             totalMass += currentBone.mass;
 
-            avDecay += currentBone.decay;
-            avSoul += currentBone.soul;
-            avHumidity += currentBone.humidity;
-            avSponginess += currentBone.sponginess;
+            avDecay += currentBone.decay * currentBone.mass;
+            avSoul += currentBone.soul * currentBone.mass;
+            avHumidity += currentBone.humidity * currentBone.mass;
+            avSponginess += currentBone.sponginess * currentBone.mass;
         }
 
-        avDecay /= selfBoneTracker.bones.Count;
-        avSoul /= selfBoneTracker.bones.Count;
-        avHumidity /= selfBoneTracker.bones.Count;
-        avSponginess /= selfBoneTracker.bones.Count;
+        avDecay /= totalMass;
+        avSoul /= totalMass;
+        avHumidity /= totalMass;
+        avSponginess /= totalMass;
     
         for (int i = 0; i < selfBoneTracker.bones.Count; i++) {
             Destroy(selfBoneTracker.bones[i]);
@@ -49,7 +49,7 @@ public class DustMaker : MonoBehaviour
         selfBoneTracker.bones.Clear();
 
         float toxicity = avDecay * 2;
-        float magic = avSoul * 3;
+        float magic = avSoul * 2;
         float tenderness = avHumidity + avSponginess;
 
         GameObject newDust = Instantiate(prefab, selfTransform.position, new Quaternion());

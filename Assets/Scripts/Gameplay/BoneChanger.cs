@@ -17,6 +17,27 @@ public class BoneChanger : MonoBehaviour
     public float massChange = 0;
 
     virtual protected void advance(PlayEntity currentBone) {
+        
+        if (currentBone.decay + decayRate <= 0) {
+            return;
+        }
+
+        if (currentBone.soul + soulShift <= 0) {
+            return;
+        }
+
+        if (currentBone.humidity + humidityChange <= 0) {
+            return;
+        }
+
+        if (currentBone.sponginess + sponginessChange <= 0) {
+            return;
+        }
+        
+        if (currentBone.mass + massChange <= 0) {
+            return;
+        }
+
         currentBone.decay      += decayRate;
         currentBone.soul       += soulShift;
         currentBone.humidity   += humidityChange;

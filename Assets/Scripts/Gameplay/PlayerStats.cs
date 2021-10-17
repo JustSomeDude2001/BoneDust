@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public int money;
+    public static int money = 40;
 }

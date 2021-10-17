@@ -10,7 +10,7 @@ public class Dust : MonoBehaviour
     public float mass = 1;
 
     public int getCost() {
-        float costPerKilo = (100 * (magic * tenderness)) / (1 + toxicity);
+        float costPerKilo = (5 * ((1 + magic) * (1 + tenderness))) / (1 + (3 * toxicity));
 
         return (int)(costPerKilo * mass);
     }
